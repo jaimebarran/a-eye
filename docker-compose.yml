@@ -1,0 +1,12 @@
+version:  "0.0"
+
+services:
+  a-eye:
+    container_name: a-eye
+    image: jaimebarran/a-eye
+    # image: a-eye
+    ports:
+      - "5000:5000"
+    build:
+      context: .
+      dockerfile: Dockerfile
