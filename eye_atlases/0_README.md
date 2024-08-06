@@ -4,6 +4,12 @@ This dataset presents large-scale, unbiased male and female eye atlases using MR
 
 ![alt text](./preview_figure.png)
 
+## Authors
+
+Jaime Barranco, Adrian Luyken, Philipp Stachs, Oscar Esteban, Yasser Aleman, Oliver Stachs, Sönke Langner, Benedetta Franceschiello and Meritxell Bach Cuadra.
+
+Copyright (c) - All rights reserved. Medical Image Analysis Laboratory - Department of Radiology, Lausanne University Hospital (CHUV) and University of Lausanne (UNIL), Lausanne,Switzerland & CIBM Center for Biomedical Imaging. 2024.
+
 ## Structure
 
 We provide a .zip file containing:
@@ -33,15 +39,13 @@ We provide a .zip file containing:
 3 directories, 11 files
 ```
 
-## Authors
+## Dataset
 
-Jaime Barranco, Adrian Luyken, Philipp Stachs, Oscar Esteban, Yasser Aleman, Oliver Stachs, Sönke Langner, Benedetta Franceschiello and Meritxell Bach Cuadra.
-
-Copyright (c) - All rights reserved. Medical Image Analysis Laboratory - Department of Radiology, Lausanne University Hospital (CHUV) and University of Lausanne (UNIL), Lausanne,Switzerland & CIBM Center for Biomedical Imaging. 2024.
+The cohort was originally acquired within the Study of Health in Pomerania (SHIP) [^1] and reused in the context of this study. A total of 3030 healthy subjects underwent whole-body MRI on a 1.5T scanner Magnetom Avanto (Siemens Medical Solutions, Erlangen, Germany) without contrast agent, from which we used 1210 subjects for this study. There were 594 males and 616 females. Subjects were overall aged between 28 and 89 (56±13) years old. T1-weighted (T1w) images of the head were acquired using a 12-channel head coil, 176 slices per volume, with a slice thickness of 1mm, and a field of view of 256mm, voxel size 1 mm3, TR=1900 ms, TI=1100 ms, TE=3.37 ms. During the MRI examination, subjects rested their eyes naturally without specific guidelines for viewing or eyelid position. All participants gave informed written consent. The study was approved by the Medical Ethics Committee of the University of Greifswald and followed the Declaration of Helsinki. All data of the study participants were accessed from an anonymized database.
 
 ## Template Construction
 
-We performed metric-based registration, consisting of rigid, affine, and then deformable registration, with ANTs toolkit [^1] to iteratively create an average mapping of the subjects grouped by sex (594 males and 616 females). We made use of the multivariate template construction tool, using as input images the right-eye-cropped ones obtained from the atlas-based segmentation method (in Supplementary Materials). Therefore, they were much smaller than the initial ones (that included the whole head). The maximum size of these right-eye-cropped images for the three axes were 61 x 70 x 68 and 77 x 95 x 94 voxels for the male and female case, respectively, and the size of the original images was 176 x 256 x 176 voxels. The size of the voxels remained 1mm3. For the deformable registration, we chose the SyN registration algorithm with the similarity metric of cross-correlation. We chose four resolution levels (8, 4, 2, 1), and iterated over each level for 80, 60, 40, and 10 iterations, respectively. Considering the reduced size of the images, we set the iteration limit (the number of iterations of the template construction) to 15, as we wanted to allow enough iterations for the template to converge and capture the variations present in our dataset. We used a 11th Gen Intel® Core™ i9-11900K × 16 processor with 64GB of RAM. The time spent to construct both atlases were 16h 15m 45s and 32h 16m 45s for the male and female cases, respectively.
+We performed metric-based registration, consisting of rigid, affine, and then deformable registration, with ANTs toolkit [^2] to iteratively create an average mapping of the subjects grouped by sex (594 males and 616 females). We made use of the multivariate template construction tool, using as input images the right-eye-cropped ones obtained from the atlas-based segmentation method (in Supplementary Materials). Therefore, they were much smaller than the initial ones (that included the whole head). The maximum size of these right-eye-cropped images for the three axes were 61 x 70 x 68 and 77 x 95 x 94 voxels for the male and female case, respectively, and the size of the original images was 176 x 256 x 176 voxels. The size of the voxels remained 1mm3. For the deformable registration, we chose the SyN registration algorithm with the similarity metric of cross-correlation. We chose four resolution levels (8, 4, 2, 1), and iterated over each level for 80, 60, 40, and 10 iterations, respectively. Considering the reduced size of the images, we set the iteration limit (the number of iterations of the template construction) to 15, as we wanted to allow enough iterations for the template to converge and capture the variations present in our dataset. We used a 11th Gen Intel® Core™ i9-11900K × 16 processor with 64GB of RAM. The time spent to construct both atlases were 16h 15m 45s and 32h 16m 45s for the male and female cases, respectively.
 
 ```bash
 #!/bin/bash
@@ -213,4 +217,6 @@ nb.save(output_image_nifti, f'{maps_dir}/prob_map.nii.gz')
 
 ## References
 
-[^1]: Avants, B., Tustison, N. J., & Song, G. (2009). Advanced Normalization Tools: V1.0. The Insight Journal. <https://doi.org/10.54294/uvnhin>.
+[^1]: Schmidt, P., Kempin, R., Langner, S., Beule, A., Kindler, S., Koppe, T., Völzke, H., Ittermann, T., Jürgens, C., & Tost, F. (2019). Association of anthropometric markers with globe position: A population-based MRI study. PLoS ONE, 14(2), e0211817. <https://doi.org/10.1371/journal.pone.0211817>
+
+[^2]: Avants, B., Tustison, N. J., & Song, G. (2009). Advanced Normalization Tools: V1.0. The Insight Journal. <https://doi.org/10.54294/uvnhin>.
