@@ -130,7 +130,8 @@ dmypy.json
 
 # Custom folders/files to ignore
 Data/
-Output/
-eye_atlases/C_eye_atlas/
-eye_atlases/C_eye_atlas.zip
-eye_atlases/eye_atlases.zip
+Output/*
+!Output/eye_atlases/
+Output/eye_atlases/C_eye_atlas/
+Output/eye_atlases/C_eye_atlas.zip
+Output/eye_atlases/eye_atlases.zip
