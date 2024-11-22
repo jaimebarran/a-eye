@@ -1,5 +1,7 @@
 {
     "python.analysis.extraPaths": [
         "./a-eye_segmentation/3DUnet_TF1/model"
-    ]
+    ],
+    "jupyter.interactiveWindow.viewColumn": "secondGroup",
+    "notebook.experimental.variablesView": true
 }
