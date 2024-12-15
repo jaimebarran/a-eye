@@ -243,7 +243,7 @@ nb.save(output_image_nifti, f'{maps_dir}/prob_map.nii.gz')
 
 ## Registration to common volumetric coordinate systems (VCS)
 
-We first cropped the eye region of the templates [[2]](#fonov)[[3]](#holmes) using their right-eye masks that we extracted by a modified version of the `antsBrainExtraction.sh`. Then, we registered them to the combined eye atlas, project its labels onto the cropped spaces, and finally transpose them back into the original spaces (inverse cropping).
+We first cropped the eye region of the templates [[2]](#fonov)[[3]](#holmes) using their right-eye masks that we extracted by a modified version of the `antsBrainExtraction.sh`. Then, we registered them to the combined and male eye atlases for MNI152 and Colin27, respectively, project its labels onto the cropped spaces, and finally transpose them back into the original spaces (inverse cropping).
 
 ## References
 
