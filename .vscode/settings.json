@@ -3,5 +3,18 @@
         "./a-eye_segmentation/3DUnet_TF1/model"
     ],
     "jupyter.interactiveWindow.viewColumn": "secondGroup",
-    "notebook.experimental.variablesView": true
+    "notebook.experimental.variablesView": true,
+    "python.defaultInterpreterPath": "/home/jaimebarranco/miniconda3/envs/a-eye/bin/python",
+    "python.condaPath": "/home/jaimebarranco/miniconda3/condabin/conda",
+    "python.venvPath": "/home/jaimebarranco/miniconda3/envs",
+    "python.terminal.activateEnvironment": true,
+    "jupyter.kernels.trusted": [
+        "/home/jaimebarranco/miniconda3/envs/a-eye/bin/python",
+        "/home/jaimebarranco/miniconda3/envs/3dmultilabel/bin/python",
+        "/home/jaimebarranco/miniconda3/envs/aeye-qc/bin/python",
+        "/home/jaimebarranco/miniconda3/envs/bmat/bin/python",
+        "/home/jaimebarranco/miniconda3/envs/fetal_brain_qc/bin/python",
+        "/home/jaimebarranco/miniconda3/envs/mreyeqc/bin/python",
+        "/home/jaimebarranco/miniconda3/envs/nnunetv2/bin/python"
+    ]
 }
