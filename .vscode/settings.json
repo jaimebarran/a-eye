@@ -16,5 +16,8 @@
         "/home/jaimebarranco/miniconda3/envs/fetal_brain_qc/bin/python",
         "/home/jaimebarranco/miniconda3/envs/mreyeqc/bin/python",
         "/home/jaimebarranco/miniconda3/envs/nnunetv2/bin/python"
-    ]
+    ],
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda",
+    "python-envs.pythonProjects": []
 }
