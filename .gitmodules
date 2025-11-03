@@ -1,9 +1,12 @@
 [submodule "a-eye_preprocessing"]
 	path = a-eye_preprocessing
 	url = https://github.com/jaimebarran/a-eye_preprocessing.git
+	branch = main
 [submodule "a-eye_segmentation"]
 	path = a-eye_segmentation
 	url = https://github.com/jaimebarran/a-eye_segmentation.git
+	branch = main
 [submodule "a-eye_web"]
 	path = a-eye_web
 	url = https://github.com/jaimebarran/a-eye_web.git
+	branch = main
