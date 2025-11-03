@@ -97,12 +97,12 @@ If you use the A-eye pipeline, atlas, or derived datasets in your work, please c
 
 ## 🧠 Repository Structure
 
-A-eye/
-├── models/ # Trained nnU-Net weights and configs (when released)
-├── notebooks/ # Example scripts for segmentation and morphometry
-├── data/ # Sample data or download scripts (if applicable)
-├── docs/ # Documentation and supplementary material
-└── LICENSE
+- `A-eye/`
+  - `models/` — Trained nnU-Net weights and configs (when released)
+  - `notebooks/` — Example scripts for segmentation and morphometry
+  - `data/` — Sample data or download scripts (if applicable)
+  - `docs/` — Documentation and supplementary material
+  - `LICENSE` — License file
 
 ---
 
