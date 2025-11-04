@@ -126,8 +126,8 @@ By downloading or using this software, you agree to the terms described in the [
 Usage is **strictly limited to academic and non-commercial research purposes**.  
 For commercial or redistribution inquiries, please contact the licensors directly.
 
-![Institutional logos](figs/logo-whitebg.png)
+## 🏛️ Institutions
 
-*Insitutional Logos*
+![Institutional logos](figs/logo-whitebg.png)
 
 > © 2025 CIBM Center for Biomedical Imaging SP CHUV-UNIL, Lausanne, Switzerland and HES-SO University of Applied Sciences and Arts Western Switzerland, Sion, Switzerland.  
