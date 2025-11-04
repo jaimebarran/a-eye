@@ -1,4 +1,4 @@
-# 🧠👁️ A-eye: Automated 3D MRI Segmentation and Morphometric Feature Extraction for Eye and Orbit Atlas Construction
+# <img src="figs/A-eye_logo_square.png" width="40" style="vertical-align:middle;"> 👁️ A-eye: Automated 3D MRI Segmentation and Morphometric Feature Extraction for Eye and Orbit Atlas Construction
 
 ## Short title: *A-eye: Automated MRI Segmentation and Morphometry of the Eye*
 
@@ -80,7 +80,7 @@ If you use the A-eye pipeline, atlas, or derived datasets in your work, please c
 
 ![MR-Eye atlases (female, male, combined) and in common VCS](figs/Fig6.png)
 
-*Figure 3. Visualization of the MR-Eye population atlases (female, male, and combined) and in common VCS.*
+*Figure 3. Visualization of the MR-Eye population atlases (female, male, and combined) and in common VCS.*    
 
 ### 🧩 Proceedings Paper
 
@@ -102,7 +102,7 @@ If you use the A-eye pipeline, atlas, or derived datasets in your work, please c
   - `notebooks/` — Example scripts for segmentation and morphometry
   - `data/` — Sample data or download scripts (if applicable)
   - `docs/` — Documentation and supplementary material
-  - `LICENSE` — License file
+      - `LICENSE` — License file
 
 ---
 
@@ -126,6 +126,8 @@ By downloading or using this software, you agree to the terms described in the [
 Usage is **strictly limited to academic and non-commercial research purposes**.  
 For commercial or redistribution inquiries, please contact the licensors directly.
 
----
+![Institutional logos](figs/logo-whitebg.png)
+
+*Insitutional Logos*
 
 > © 2025 CIBM Center for Biomedical Imaging SP CHUV-UNIL, Lausanne, Switzerland and HES-SO University of Applied Sciences and Arts Western Switzerland, Sion, Switzerland.  
