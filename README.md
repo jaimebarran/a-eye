@@ -137,7 +137,7 @@ Mount your local input/output folders to `/input` and `/output` inside the conta
 docker run --rm --gpus all --shm-size=10gb \
     -v /path/to/local/input:/input \
     -v /path/to/local/output:/output \
-    jaimebarran/fw_gear_aeye \
+    jaimebarran/fw_gear_aeye:0.0.1 \
     nnUNet_predict \
         -i /input \
         -o /output \
