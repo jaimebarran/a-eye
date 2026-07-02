@@ -49,7 +49,7 @@ If you use the A-eye pipeline, atlas, or derived datasets in your work, please c
 > Barranco J, Luyken A, Stachs P, Esteban O, Aleman-Gomez Y, Stachs O, *et al.*  
 > **MR-Eye atlas: a large-scale atlas of the eye based on T1-weighted MR imaging** [dataset].  
 > *Zenodo*, 2024.  
-> [https://doi.org/10.5281/zenodo.13325371](https://doi.org/10.5281/zenodo.13325371)
+> [https://doi.org/10.5281/zenodo.13325369](https://doi.org/10.5281/zenodo.13325369)
 
 ![MR-Eye atlases (female, male, combined) and in common VCS](figs/Fig6.png)
 
@@ -144,7 +144,7 @@ nnUNet_predict \
 
 ### 📦 Using the Model Weights Directly
 
-The pretrained model weights are available on **[Zenodo](https://doi.org/10.5281/zenodo.13325371)** and can be installed into any existing nnU-Net environment:
+The pretrained model weights are available on **[Zenodo](https://doi.org/10.5281/zenodo.13325369)** and can be installed into any existing nnU-Net environment:
 
 ```bash
 nnUNet_install_pretrained_model_from_zip A-eye_nnUNet_model_weights.zip

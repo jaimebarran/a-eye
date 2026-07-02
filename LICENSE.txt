@@ -24,7 +24,7 @@ LICENSEE acknowledges that title to the PROGRAM shall remain with LICENSORS. The
 Notice of attribution:
 
 * Jaime Barranco, Adrian Luyken, Hamza Kebiri, Philipp Stachs, Pedro M. Gordaliza, Oscar Esteban, Yasser Aleman, Raphael Sznitman, Oliver Stachs, Sönke Langner, Benedetta Franceschiello, Meritxell Bach Cuadra, A-eye: Automated 3D MRI Segmentation and Morphometric Feature Extraction for Eye and Orbit Atlas Construction, PLOS ONE, https://doi.org/10.1371/journal.pone.0352257
-* Barranco J, Luyken A, Stachs P, Esteban O, Aleman-Gomez Y, Stachs O, et al. MR-Eye atlas: a large-scale atlas of the eye based on T1-weighted MR imaging [dataset]. Zenodo; 2024. https://doi.org/10.5281/zenodo.13325371
+* Barranco J, Luyken A, Stachs P, Esteban O, Aleman-Gomez Y, Stachs O, et al. MR-Eye atlas: a large-scale atlas of the eye based on T1-weighted MR imaging [dataset]. Zenodo; 2024. https://doi.org/10.5281/zenodo.13325369
 
 LICENSEE shall not use any trademark or trade name of LICENSORS, or any variation, adaptation, or abbreviation, of such marks or trade names, or any names of officers, faculty, students, employees, or agents of LICENSORS except as states above for acknowledgements purposes.
 
