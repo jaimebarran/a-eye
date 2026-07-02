@@ -125,7 +125,7 @@ Prefer to run the model locally or on your own infrastructure? Use the ready-to-
 
 ### 🐳 Using the Docker Image
 
-The Docker image, available on Docker Hub at [jaimebarran/fw_gear_aeye](https://hub.docker.com/repository/docker/jaimebarran/fw_gear_aeye), ships with nnU-Net and the pretrained weights already installed:
+The Docker image, available on Docker Hub at [jaimebarran/fw_gear_aeye](https://hub.docker.com/r/jaimebarran/fw_gear_aeye), ships with nnU-Net and the pretrained weights already installed:
 
 ```bash
 docker pull jaimebarran/fw_gear_aeye
