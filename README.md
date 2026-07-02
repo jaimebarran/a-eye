@@ -12,11 +12,63 @@
 
 *Figure 2. Example of axial length automatic extraction in 3D.*
 
+## 📑 Contents
+
+- [📚 How to Cite](#-how-to-cite)
+  - [📰 Journal Paper](#-journal-paper)
+  - [🧭 Eye Atlases Dataset](#-eye-atlases-dataset)
+  - [🧩 Proceedings Paper](#-proceedings-paper)
+- [📘 Overview](#-overview)
+- [🧩 Abstract](#-abstract)
+- [🧠 Keywords](#-keywords)
+- [🏛️ Affiliations](#️-affiliations)
+- [🌍 Web Platform](#-web-platform)
+- [🛠️ Run It Yourself](#️-run-it-yourself)
+  - [🐳 Using the Docker Image](#-using-the-docker-image)
+  - [📦 Using the Model Weights Directly](#-using-the-model-weights-directly)
+- [🧠 Repository Structure](#-repository-structure)
+- [🧑‍💻 Contact](#-contact)
+- [📄 License](#-license)
+- [🏛️ Institutions](#️-institutions)
+
+---
+
+## 📚 How to Cite
+
+If you use the A-eye pipeline, atlas, or derived datasets in your work, please cite the relevant resources below:
+
+### 📰 Journal Paper
+
+> Barranco J, Luyken A, Kebiri H, Stachs P, Gordaliza PM, Esteban O, Aleman Y, Sznitman R, Stachs O, Langner S, Franceschiello B, Bach Cuadra M.  
+> **A-eye: Automated 3D MRI Segmentation and Morphometric Feature Extraction for Eye and Orbit Atlas Construction.**  
+> *PLOS ONE*, 2025.  
+> [https://doi.org/10.1371/journal.pone.0352257](https://doi.org/10.1371/journal.pone.0352257)
+
+### 🧭 Eye Atlases Dataset
+
+> Barranco J, Luyken A, Stachs P, Esteban O, Aleman-Gomez Y, Stachs O, *et al.*  
+> **MR-Eye atlas: a large-scale atlas of the eye based on T1-weighted MR imaging** [dataset].  
+> *Zenodo*, 2024.  
+> [https://doi.org/10.5281/zenodo.13325371](https://doi.org/10.5281/zenodo.13325371)
+
+![MR-Eye atlases (female, male, combined) and in common VCS](figs/Fig6.png)
+
+*Figure 3. Visualization of the MR-Eye population atlases (female, male, and combined) and in common VCS.*
+
+### 🧩 Proceedings Paper
+
+> Barranco Hernandez J, Luyken A, Stachs O, Langner S, Franceschiello B, Bach Cuadra M.  
+> **A-eye: automated 3D segmentation of healthy human eye and orbit structures and axial length extraction.**  
+> 2025.  
+> [https://doi.org/10.26039/TA7F-X088](https://doi.org/10.26039/TA7F-X088)
+
+---
+
 ## 📘 Overview
 
 This repository accompanies the paper:
 
-> **Barranco J.**, Luyken A., Jia Y., Kebiri H., Stachs P., Gordaliza P. M., Esteban O., Aleman Y., Sznitman R., Stachs O., Langner S., Franceschiello B.†, Bach Cuadra M.†  
+> **Barranco J.**, Luyken A., Kebiri H., Stachs P., Gordaliza P. M., Esteban O., Aleman Y., Sznitman R., Stachs O., Langner S., Franceschiello B.†, Bach Cuadra M.†  
 > **A-eye: Automated 3D MRI Segmentation and Morphometric Feature Extraction for Eye and Orbit Atlas Construction**  
 > † Equal last authorship
 > 📧 *Corresponding authors:*  
@@ -61,48 +113,60 @@ A major outcome of this work is the **first large-scale, unbiased eye atlases (f
 
 ## 🌍 Web Platform
 
-🚀 **Coming soon!**
+🚀 The interactive web platform is now live at **[aeye.hevs.ch](https://aeye.hevs.ch)**.
 
-An interactive web interface will allow exploration of the MR-Eye atlases, morphometric statistics, and automated segmentation examples.
+Explore the MR-Eye atlases, morphometric statistics, and automated segmentation examples, or run the segmentation pipeline directly from your browser.
 
 ---
 
-## 📚 How to Cite
+## 🛠️ Run It Yourself
 
-If you use the A-eye pipeline, atlas, or derived datasets in your work, please cite the relevant resources below:
+Prefer to run the model locally or on your own infrastructure? Use the ready-to-use Docker image, or install the pretrained weights into your own nnU-Net setup.
 
-### 🧭 Eye Atlases Dataset
+### 🐳 Using the Docker Image
 
-> Barranco J, Luyken A, Stachs P, Esteban O, Aleman-Gomez Y, Stachs O, *et al.*  
-> **MR-Eye atlas: a large-scale atlas of the eye based on T1-weighted MR imaging** [dataset].  
-> *Zenodo*, 2024.  
-> [https://doi.org/10.5281/zenodo.13325371](https://doi.org/10.5281/zenodo.13325371)
+The Docker image, available on Docker Hub at [jaimebarran/fw_gear_aeye](https://hub.docker.com/repository/docker/jaimebarran/fw_gear_aeye), ships with nnU-Net and the pretrained weights already installed:
 
-![MR-Eye atlases (female, male, combined) and in common VCS](figs/Fig6.png)
+```bash
+docker pull jaimebarran/fw_gear_aeye
+```
 
-*Figure 3. Visualization of the MR-Eye population atlases (female, male, and combined) and in common VCS.*    
+```bash
+nnUNet_predict \
+    -i /input \
+    -o /output \
+    -tr nnUNetTrainerV2 \
+    -ctr nnUNetTrainerV2CascadeFullRes \
+    -m 3d_fullres \
+    -p nnUNetPlansv2.1 \
+    -t Task313_Eye
+```
 
-### 🧩 Proceedings Paper
+### 📦 Using the Model Weights Directly
 
-> Barranco Hernandez J, Luyken A, Stachs O, Langner S, Franceschiello B, Bach Cuadra M.  
-> **A-eye: automated 3D segmentation of healthy human eye and orbit structures and axial length extraction.**  
-> 2025.  
-> [https://doi.org/10.26039/TA7F-X088](https://doi.org/10.26039/TA7F-X088)
+The pretrained model weights are available on **[Zenodo](https://doi.org/10.5281/zenodo.13325371)** and can be installed into any existing nnU-Net environment:
 
-### 📰 Journal Paper
-
-> *Coming soon!*
+```bash
+nnUNet_install_pretrained_model_from_zip A-eye_nnUNet_model_weights.zip
+nnUNet_predict -i /input -o /output -t Task313_Eye -m 3d_fullres -tr nnUNetTrainerV2
+```
 
 ---
 
 ## 🧠 Repository Structure
 
-- `A-eye/`
-  - `models/` — Trained nnU-Net weights and configs (when released)
-  - `notebooks/` — Example scripts for segmentation and morphometry
-  - `data/` — Sample data or download scripts (if applicable)
-  - `docs/` — Documentation and supplementary material
-      - `LICENSE` — License file
+This repository bundles three components as git submodules:
+
+- [`a-eye_preprocessing/`](./a-eye_preprocessing) — MRI preprocessing pipeline (e.g. ANTs-based registration, bias field correction, quality control)
+- [`a-eye_segmentation/`](./a-eye_segmentation) — Deep learning (nnU-Net) segmentation pipeline and atlas registration/construction scripts
+- [`a-eye_web/`](./a-eye_web) — Flask web application powering [aeye.hevs.ch](https://aeye.hevs.ch)
+- [`LICENSE.txt`](./LICENSE.txt) — License file
+
+Clone with submodules using:
+
+```bash
+git clone --recurse-submodules https://github.com/jaimebarran/a-eye.git
+```
 
 ---
 
