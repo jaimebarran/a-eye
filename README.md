@@ -131,15 +131,21 @@ The Docker image, available on Docker Hub at [jaimebarran/fw_gear_aeye](https://
 docker pull jaimebarran/fw_gear_aeye
 ```
 
+Mount your local input/output folders to `/input` and `/output` inside the container and run:
+
 ```bash
-nnUNet_predict \
-    -i /input \
-    -o /output \
-    -tr nnUNetTrainerV2 \
-    -ctr nnUNetTrainerV2CascadeFullRes \
-    -m 3d_fullres \
-    -p nnUNetPlansv2.1 \
-    -t Task313_Eye
+docker run --rm --gpus all --shm-size=10gb \
+    -v /path/to/local/input:/input \
+    -v /path/to/local/output:/output \
+    jaimebarran/fw_gear_aeye \
+    nnUNet_predict \
+        -i /input \
+        -o /output \
+        -tr nnUNetTrainerV2 \
+        -ctr nnUNetTrainerV2CascadeFullRes \
+        -m 3d_fullres \
+        -p nnUNetPlansv2.1 \
+        -t Task313_Eye
 ```
 
 ### 📦 Using the Model Weights Directly
