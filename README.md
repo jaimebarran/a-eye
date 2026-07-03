@@ -178,7 +178,7 @@ git clone --recurse-submodules https://github.com/jaimebarran/a-eye.git
 
 For questions or collaborations, please contact:
 
-- Jaime Barranco — [jaime.barranco-hernandez@chuv.ch](mailto:jaime.barranco-hernandez@chuv.ch), [jaime.barrancohernandez@hevs.ch](mailto:jaime.barrancohernandez@hevs.ch), [jaime.barrancohernandez@unil.ch](mailto:jaime.barrancohernandez@unil.ch)
+- Jaime Barranco — [jaime.barrancohernandez@hevs.ch](mailto:jaime.barrancohernandez@hevs.ch), [jaime.barrancohernandez@unil.ch](mailto:jaime.barrancohernandez@unil.ch), [jaime.barranco-hernandez@chuv.ch](mailto:jaime.barranco-hernandez@chuv.ch)
 - Benedetta Franceschiello — [benedetta.franceschiello@hevs.ch](mailto:benedetta.franceschiello@hevs.ch)  
 - Meritxell Bach Cuadra — [meritxell.bachcuadra@unil.ch](mailto:meritxell.bachcuadra@unil.ch)
 
