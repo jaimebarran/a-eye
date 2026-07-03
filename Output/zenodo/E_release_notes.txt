@@ -12,7 +12,8 @@ Added:
 Documentation Updates:
 - Updated B_README.md and B_README.txt:
   - Replaced the bioRxiv preprint link with the published PLOS ONE citation.
-  - Added a new "Code, Pretrained Model & Web Platform" section linking to the A-eye GitHub repository (https://github.com/jaimebarran/a-eye) and the web platform (https://aeye.hevs.ch).
+  - Added a new "Code, Pretrained Model & Web Platform" section linking to the A-eye GitHub repository (https://github.com/jaimebarran/a-eye).
+  - Added a description of the web platform (https://aeye.hevs.ch), where users can upload a T1-weighted MRI scan to run the segmentation pipeline directly in their browser, explore the MR-Eye atlases in interactive 3D, and inspect the resulting morphometric measurements.
   - Added instructions for installing the pretrained weights or running the ready-to-use Docker image (jaimebarran/fw_gear_aeye, https://hub.docker.com/r/jaimebarran/fw_gear_aeye).
 
 2026-04-17 - Manual Segmentation Update

@@ -27,7 +27,8 @@ The current update adds:
   - A-eye_nnUNet_model_weights.zip: pretrained nnU-Net weights (Task313_Eye) used to generate the segmentations underlying this atlas
   - updated README and release notes files:
       - replacing the bioRxiv preprint link with the published PLOS ONE citation
-      - adding a new "Code, Pretrained Model & Web Platform" section linking to the A-eye GitHub repository (https://github.com/jaimebarran/a-eye) and web platform (https://aeye.hevs.ch)
+      - adding a new "Code, Pretrained Model & Web Platform" section linking to the A-eye GitHub repository (https://github.com/jaimebarran/a-eye)
+      - describing the web platform (https://aeye.hevs.ch), where users can upload a T1-weighted MRI scan to run the segmentation pipeline directly in their browser, explore the MR-Eye atlases in interactive 3D, and inspect the resulting morphometric measurements
       - adding instructions for installing the pretrained weights or running the ready-to-use Docker image (jaimebarran/fw_gear_aeye, https://hub.docker.com/r/jaimebarran/fw_gear_aeye)
 
 Detailed information on the original large-scale cohort, automated segmentation method, unbiased atlas construction, probability maps, and registration to common volumetric coordinate systems is provided in the README file.

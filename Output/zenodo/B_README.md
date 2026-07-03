@@ -18,9 +18,13 @@ This work is distributed with License Creative Commons Attribution 4.0 Internati
 
 ## Code, Pretrained Model & Web Platform
 
-The full segmentation and atlas-construction pipeline, together with the interactive web platform, is available on GitHub: <https://github.com/jaimebarran/a-eye>
+The full segmentation and atlas-construction pipeline is available on GitHub: <https://github.com/jaimebarran/a-eye>
 
-Try it online at <https://aeye.hevs.ch>, or run it yourself:
+### Web Platform
+
+Try A-eye online at <https://aeye.hevs.ch> — no installation required. Upload a T1-weighted MRI scan to run the segmentation pipeline directly in your browser, explore the MR-Eye atlases in interactive 3D, and inspect the resulting morphometric measurements.
+
+Prefer to run it locally or on your own infrastructure instead? Use the ready-to-use Docker image, or install the pretrained weights into your own nnU-Net setup:
 
 ### Using the Docker Image
 
