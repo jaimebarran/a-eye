@@ -4,6 +4,8 @@ MR-Eye atlas is a novel digital atlas constructed from MR images (T1-weighted MR
 It gathers a male, a female, and a combined (male and female) structural atlases constructed from 594 males and 616 females, with their corresponding probability maps of the different labels projected onto the average respective male and female templates.
 Additionally, the maximum probability maps are provided for each case.
 
+MR-Eye atlas is presented, described and tested in the following peer-reviewed article, published in PLOS ONE: <https://doi.org/10.1371/journal.pone.0352257>. Any works using any of the provided resources should cite the above referred article.
+
 ![alt text](./A_preview_figure.png)
 
 ## Authors
@@ -13,7 +15,47 @@ Jaime Barranco, Adrian Luyken, Philipp Stachs, Oscar Esteban, Yasser Aleman, Oli
 ## License
 This work is distributed with License Creative Commons Attribution 4.0 International (see D_License.txt)
 
+## Code, Pretrained Model & Web Platform
+
+The full segmentation and atlas-construction pipeline, together with the interactive web platform, is available on GitHub: <https://github.com/jaimebarran/a-eye>
+
+Try it online at <https://aeye.hevs.ch>, or run it yourself:
+
+### Using the Docker Image
+
+The Docker image, available on Docker Hub at jaimebarran/fw_gear_aeye (<https://hub.docker.com/r/jaimebarran/fw_gear_aeye>), ships with nnU-Net and the pretrained weights already installed:
+
+```bash
+docker pull jaimebarran/fw_gear_aeye
+```
+
+```bash
+docker run --rm --gpus all --shm-size=10gb \
+    -v /path/to/local/input:/input \
+    -v /path/to/local/output:/output \
+    jaimebarran/fw_gear_aeye:0.0.1 \
+    nnUNet_predict \
+        -i /input \
+        -o /output \
+        -tr nnUNetTrainerV2 \
+        -ctr nnUNetTrainerV2CascadeFullRes \
+        -m 3d_fullres \
+        -p nnUNetPlansv2.1 \
+        -t Task313_Eye
+```
+
+### Using the Model Weights Directly
+
+The pretrained model weights (A-eye_nnUNet_model_weights.zip, included in this Zenodo record) can be installed into any existing nnU-Net environment:
+
+```bash
+nnUNet_install_pretrained_model_from_zip A-eye_nnUNet_model_weights.zip
+nnUNet_predict -i /input -o /output -t Task313_Eye -m 3d_fullres -tr nnUNetTrainerV2
+```
+
 ## Structure
+
+Alongside the atlas archive below, this Zenodo record also provides A-eye_nnUNet_model_weights.zip, the pretrained nnU-Net weights (Task313_Eye) used to generate the segmentations underlying this atlas -- see "Code, Pretrained Model & Web Platform" above for installation instructions.
 
 We provide a .zip file containing:
 
@@ -21,6 +63,7 @@ We provide a .zip file containing:
 - template.nii.gz: atlas of the eye images (per sex and combined)
 - max_prob_map.npy and max_prob_map.nii.gz: maximum probability maps (per sex and combined)
 - prob_map.npy and prob_map.nii.gz: probability maps (per sex and combined)
+- 3_manual_seg.nii.gz and 3_manual_seg.itksnap: manual segmentation and corresponding ITK-SNAP file for the combined eye atlas
 - Colin27 [[1]](#ciric)[[2]](#fonov) T1w image + eye labels (also eye cropped image + labels)
 - MNI152 [[1]](#ciric)[[3]](#holmes) T1w image + eye labels (also eye cropped image + labels)
 
@@ -39,7 +82,9 @@ T1w images retrieved from <https://github.com/templateflow/templateflow>.
     │   ├── 1_max_prob_map.nii.gz
     │   ├── 1_max_prob_map.npy
     │   ├── 2_prob_map.nii.gz
-    │   └── 2_prob_map.npy
+    │   ├── 2_prob_map.npy
+    │   ├── 3_manual_seg.itksnap
+    │   └── 3_manual_seg.nii.gz
     ├── female
     │   ├── 0_template.nii.gz
     │   ├── 1_max_prob_map.nii.gz
@@ -59,7 +104,7 @@ T1w images retrieved from <https://github.com/templateflow/templateflow>.
     │   └── 1_tpl-MNI152NLin2009cAsym_res-01_T1w_cropped.nii.gz
     └── sub_metadata.csv
     
-    6 directories, 24 files
+    6 directories, 26 files
 ```
 
 ## Dataset

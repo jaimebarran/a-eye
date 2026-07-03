@@ -4,14 +4,6 @@
 
 ---
 
-![Overview of A-eye results](figs/Fig1.png)
-
-*Figure 1. Overview of the A-eye results for automated MRI eye segmentation and morphometry.*
-
-![Axial length automatic extraction](figs/Fig9.png)
-
-*Figure 2. Example of axial length automatic extraction in 3D.*
-
 ## 📑 Contents
 
 - [📚 How to Cite](#-how-to-cite)
@@ -30,6 +22,14 @@
 - [🧑‍💻 Contact](#-contact)
 - [📄 License](#-license)
 - [🏛️ Institutions](#️-institutions)
+
+![Overview of A-eye results](figs/Fig1.png)
+
+*Figure 1. Overview of the A-eye results for automated MRI eye segmentation and morphometry.*
+
+![Axial length automatic extraction](figs/Fig9.png)
+
+*Figure 2. Example of axial length automatic extraction in 3D.*
 
 ---
 

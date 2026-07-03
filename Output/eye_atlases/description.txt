@@ -1,0 +1,41 @@
+MR-Eye atlas is a novel digital atlas constructed from MR images (T1-weighted MRI acquired at 1.5T) of a large-scale population of healthy volunteers. It gathers male, female, and combined male/female structural atlases constructed from 594 males and 616 females, with corresponding probability maps of the different labels projected onto the average templates. The atlases include 9 regions of interest: lens, globe, optic nerve, intraconal and extraconal fat, and four rectus muscles (lateral, medial, inferior, and superior).
+
+The initial Zenodo release, uploaded on 2024-08-15, included:
+
+  - sub_metadata.csv: dataset summary table
+  - male/0_template.nii.gz and female/0_template.nii.gz: male and female eye atlas images
+  - male/1_max_prob_map.npy, male/1_max_prob_map.nii.gz, female/1_max_prob_map.npy, and female/1_max_prob_map.nii.gz: maximum probability maps
+  - male/2_prob_map.npy, male/2_prob_map.nii.gz, female/2_prob_map.npy, and female/2_prob_map.nii.gz: probability maps
+
+Version 2, uploaded on 2025-07-15, added:
+
+  - combined/0_template.nii.gz: combined male/female eye atlas image
+  - combined/1_max_prob_map.npy and combined/1_max_prob_map.nii.gz: maximum probability map for the combined atlas
+  - combined/2_prob_map.npy and combined/2_prob_map.nii.gz: probability map for the combined atlas
+  - labels projected onto Colin27 and MNI152 T1w spaces, along with the images and their cropped versions
+  - additional preview figures showing labels overlaid onto Colin27 and MNI152 images, and a schematic diagram of the processing workflow
+  - updated README and release notes files
+
+Version 3, uploaded on 2026-04-17, added:
+
+  - combined/3_manual_seg.nii.gz: manual segmentation for the combined eye atlas
+  - combined/3_manual_seg.itksnap: ITK-SNAP file supporting inspection and editing of the manual segmentation
+  - updated README and release notes files describing the new manual segmentation files and updated archive structure
+
+The current update adds:
+
+  - A-eye_nnUNet_model_weights.zip: pretrained nnU-Net weights (Task313_Eye) used to generate the segmentations underlying this atlas
+  - updated README and release notes files:
+      - replacing the bioRxiv preprint link with the published PLOS ONE citation
+      - adding a new "Code, Pretrained Model & Web Platform" section linking to the A-eye GitHub repository (https://github.com/jaimebarran/a-eye) and web platform (https://aeye.hevs.ch)
+      - adding instructions for installing the pretrained weights or running the ready-to-use Docker image (jaimebarran/fw_gear_aeye, https://hub.docker.com/r/jaimebarran/fw_gear_aeye)
+
+Detailed information on the original large-scale cohort, automated segmentation method, unbiased atlas construction, probability maps, and registration to common volumetric coordinate systems is provided in the README file.
+
+MR-Eye atlas is presented and described in the following peer-reviewed article, published in PLOS ONE:
+
+"A-eye: Automated 3D MRI Segmentation and Morphometric Feature Extraction for Eye and Orbit Atlas Construction", Jaime Barranco, Adrian Luyken, Hamza Kebiri, Philipp Stachs, Pedro M. Gordaliza, Oscar Esteban, Yasser Aleman, Raphael Sznitman, Oliver Stachs, Sönke Langner, Benedetta Franceschiello, Meritxell Bach Cuadra, PLOS ONE, https://doi.org/10.1371/journal.pone.0352257
+
+Works using any of the provided resources should cite the above-referenced article.
+
+Copyright (c) - All rights reserved. Medical Image Analysis Laboratory - Department of Radiology, Lausanne University Hospital (CHUV) and University of Lausanne (UNIL), Lausanne, Switzerland & CIBM Center for Biomedical Imaging. 2024.
