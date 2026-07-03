@@ -1,7 +1,5 @@
 # <img src="figs/A-eye_logo_square.png" width="40" style="vertical-align:middle;"> 👁️ A-eye: Automated 3D MRI Segmentation and Morphometric Feature Extraction for Eye and Orbit Atlas Construction
 
-## Short title: *A-eye: Automated MRI Segmentation and Morphometry of the Eye*
-
 ---
 
 ## 📑 Contents
