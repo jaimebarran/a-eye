@@ -70,7 +70,7 @@ This repository accompanies the paper:
 > **A-eye: Automated 3D MRI Segmentation and Morphometric Feature Extraction for Eye and Orbit Atlas Construction**  
 > † Equal last authorship
 > 📧 *Corresponding authors:*  
-> <jaime.barranco-hernandez@chuv.ch>, <benedetta.franceschiello@hevs.ch>, <meritxell.bachcuadra@unil.ch>  
+> <jaime.barrancohernandez@hevs.ch>, <benedetta.franceschiello@hevs.ch>, <meritxell.bachcuadra@unil.ch>  
 
 ---
 
